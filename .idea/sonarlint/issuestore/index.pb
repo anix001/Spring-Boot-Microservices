@@ -3,17 +3,9 @@ x
 Hproduct-service/src/main/java/com/productservice/dto/ProductRequest.java,f\5\f50b2acb058c12aaf67bebef87f4f8675f456114
 y
 Iinventory-service/src/main/java/com/inventoryservice/model/Inventory.java,0\a\0adbad66323b229a5d8feb3b6bc0da6013b5202d
-
-Oproduct-service/src/main/java/com/productservice/ProductServiceApplication.java,5\1\51e90a98606a3c72b56b0d943a39fe894ad91a87
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 „
 Tproduct-service/src/test/java/com/productservice/ProductServiceApplicationTests.java,e\d\ed64a88f5d458078948a310f2b28675503ad02bd
-G
-product-service/pom.xml,f\c\fcf146007330bb14605a232d25428bbf6aa50b7b
 v
 Forder-service/src/main/java/com/orderservice/service/OrderService.java,d\6\d601e8853e33f22c1412f7562daae842621048b0
 m
 =order-service/src/main/java/com/orderservice/model/Order.java,c\a\ca5f5b0c9208fa178a3d0d7e81d7b8d7fb28d3ab
-|
-Lproduct-service/src/main/java/com/productservice/service/ProductService.java,9\5\95fc9cc756f4741b329bed185fe6a67218474aa0
