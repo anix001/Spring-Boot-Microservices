@@ -14,4 +14,5 @@ import java.util.stream.Collectors;
 
 public interface ProductService {
     void createProduct(ProductRequest productRequest);
+    List<ProductResponse> getAllProducts();
 }
