@@ -9,3 +9,11 @@ v
 Forder-service/src/main/java/com/orderservice/service/OrderService.java,d\6\d601e8853e33f22c1412f7562daae842621048b0
 m
 =order-service/src/main/java/com/orderservice/model/Order.java,c\a\ca5f5b0c9208fa178a3d0d7e81d7b8d7fb28d3ab
+‚
+Rdiscovery-server/src/main/java/com/discoveryserver/DiscoveryServerApplication.java,5\b\5bee6bfafffe1e19fe1bd19b2f1236ee241c6175
+H
+discovery-server/pom.xml,2\c\2c58c7878e43d126fc56cae853d5b06de57d0b3e
+I
+inventory-service/pom.xml,e\3\e347da292c40d252c508703eddff460d1f378f1c
+…
+Uproduct-service/src/main/java/com/productservice/service/impl/ProductServiceImpl.java,4\5\45307e0f333ead3da4e071ff310fdb7156accdd1
