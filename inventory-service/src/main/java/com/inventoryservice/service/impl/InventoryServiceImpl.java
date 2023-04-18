@@ -4,6 +4,7 @@ import com.inventoryservice.dto.InventoryResponse;
 import com.inventoryservice.repository.InventoryRepository;
 import com.inventoryservice.service.InventoryService;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,15 +18,16 @@ import java.util.stream.Collectors;
 public class InventoryServiceImpl implements InventoryService {
     private final InventoryRepository inventoryRepository;
 
+//    @SneakyThrows
     @Transactional(readOnly = true)
     public List<InventoryResponse> isInStock(List<String> skuCode){
-        log.info("wait started");
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        log.info("wait ended");
+//        log.info("wait started");
+////        try {
+//            Thread.sleep(10000);
+////        } catch (InterruptedException e) {
+////            e.printStackTrace();
+////        }
+//        log.info("wait ended");
         return  inventoryRepository.findBySkuCodeIn(skuCode).stream()
                 .map(inventory ->
                     InventoryResponse.builder()
