@@ -13,3 +13,7 @@ I
 inventory-service/pom.xml,e\3\e347da292c40d252c508703eddff460d1f378f1c
 …
 Uproduct-service/src/main/java/com/productservice/service/impl/ProductServiceImpl.java,4\5\45307e0f333ead3da4e071ff310fdb7156accdd1
+H
+discovery-server/pom.xml,2\c\2c58c7878e43d126fc56cae853d5b06de57d0b3e
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
