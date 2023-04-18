@@ -7,6 +7,7 @@ import com.orderservice.model.Order;
 import com.orderservice.model.OrderLineItems;
 import com.orderservice.repository.OrderRepository;
 import com.orderservice.service.OrderService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,7 +26,8 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
 
-    public void placeOrder(OrderRequest orderRequest){
+    @CircuitBreaker(name= "inventory", fallbackMethod = "fallbackMethod")
+    public String placeOrder(OrderRequest orderRequest){
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
 
@@ -53,6 +55,7 @@ public class OrderServiceImpl implements OrderService {
 
         if(allProductsInStock){
             orderRepository.save(order);
+            return "Order Placed Successfully";
         }else{
             throw new IllegalArgumentException("Product is not in stock, please try again later");
         }
@@ -64,5 +67,9 @@ public class OrderServiceImpl implements OrderService {
         orderLineItems.setQuantity(orderLineItemsDto.getQuantity());
         orderLineItems.setSkuCode(orderLineItemsDto.getSkuCode());
         return orderLineItems;
+    }
+
+    public String fallbackMethod(OrderRequest orderRequest, RuntimeException runtimeException){
+        return "Oops! Something went wrong, Please order after some time!";
     }
 }
