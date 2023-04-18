@@ -5,8 +5,6 @@ y
 Iinventory-service/src/main/java/com/inventoryservice/model/Inventory.java,0\a\0adbad66323b229a5d8feb3b6bc0da6013b5202d
 „
 Tproduct-service/src/test/java/com/productservice/ProductServiceApplicationTests.java,e\d\ed64a88f5d458078948a310f2b28675503ad02bd
-v
-Forder-service/src/main/java/com/orderservice/service/OrderService.java,d\6\d601e8853e33f22c1412f7562daae842621048b0
 m
 =order-service/src/main/java/com/orderservice/model/Order.java,c\a\ca5f5b0c9208fa178a3d0d7e81d7b8d7fb28d3ab
 ‚
@@ -15,3 +13,7 @@ I
 inventory-service/pom.xml,e\3\e347da292c40d252c508703eddff460d1f378f1c
 …
 Uproduct-service/src/main/java/com/productservice/service/impl/ProductServiceImpl.java,4\5\45307e0f333ead3da4e071ff310fdb7156accdd1
+H
+discovery-server/pom.xml,2\c\2c58c7878e43d126fc56cae853d5b06de57d0b3e
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73

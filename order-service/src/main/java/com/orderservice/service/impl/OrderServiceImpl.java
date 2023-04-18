@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
@@ -25,7 +24,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
 
-    public void placeOrder(OrderRequest orderRequest){
+    public String placeOrder(OrderRequest orderRequest){
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
 
@@ -53,6 +52,7 @@ public class OrderServiceImpl implements OrderService {
 
         if(allProductsInStock){
             orderRepository.save(order);
+            return "Order Placed Successfully";
         }else{
             throw new IllegalArgumentException("Product is not in stock, please try again later");
         }
